@@ -1,7 +1,8 @@
 <?php
 // Start the session
 session_start();
-
+define('ENCRYPTION_KEY', '*&BUYG');
+define('ENCRYPTION_METHOD', 'AES-256-CBC');
 require_once 'models/UserModel.php';
 $userModel = new UserModel();
 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -15,8 +16,14 @@ if (!isset($_SESSION['id'])) {
 // Hàm mã hóa ID
 function encodeId($id)
 {
-    $encoded = strrev($id) . '*&BUYG';
-    return base64_encode($encoded);  // Mã hóa bằng base64
+    // Generate an initialization vector
+    $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length(ENCRYPTION_METHOD));
+
+    // Encrypt the ID
+    $encryptedId = openssl_encrypt($id, ENCRYPTION_METHOD, ENCRYPTION_KEY, 0, $iv);
+
+    // Combine the encrypted ID and IV for later decryption
+    return base64_encode($encryptedId . '::' . base64_encode($iv));
 }
 
 $params = [];

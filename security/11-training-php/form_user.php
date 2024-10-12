@@ -10,9 +10,8 @@ $_id = NULL;
 // Hàm giải mã ID
 function decodeId($encodedId)
 {
-    $decoded = base64_decode($encodedId);  // Giải mã base64
-    $decoded = str_replace('*&BUYG', '', $decoded);  // Loại bỏ phần thêm vào
-    return strrev($decoded);  // Đảo ngược chuỗi để lấy ID gốc
+    list($encryptedData, $iv) = explode('::', base64_decode($encodedId), 2);
+    return openssl_decrypt($encryptedData, ENCRYPTION_METHOD, ENCRYPTION_KEY, 0, base64_decode($iv));
 }
 
 if (!empty($_GET['id'])) {
