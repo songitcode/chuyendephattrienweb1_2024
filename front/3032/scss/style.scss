@@ -1,0 +1,67 @@
+// @import url('./_variables.scss');
+
+// .left ul li {
+//     list-style: none;
+//     font-weight: 650;
+//     margin-right: 10px;
+// }
+
+// .breadcrumb-area h1 {
+//     font-size: 24px;
+//     font-weight: 700;
+// }
+
+// .breadcrumb-area {
+//     background: #F7F7F7;
+//     padding: 30px;
+
+// }
+
+// .breadcrumb-botton-area {
+//     border-bottom: 1px solid #F0F0F0;
+//     padding: 20px 0 40px 0;
+// }
+
+// .left ul li:last-child {
+//     color: $color-link;
+// }
+
+// .left ul li a:first-child {
+//     color: black;
+//     text-decoration: none;
+// }
+
+// // Mixin để tạo container
+// @mixin container($max-width) {
+//     width: 100%;
+//     max-width: $max-width;
+//     margin-right: auto;
+//     margin-left: auto;
+//     padding-right: $container-padding;
+//     padding-left: $container-padding;
+//     box-sizing: border-box;
+// }
+
+// .container-1 {
+//     // Áp dụng mixin cho màn hình lớn
+//     @include container(map-get($container-max-widths, large));
+
+//     // Media queries cho các kích thước màn hình khác
+//     @media (max-width: 1200px) {
+//         @include container(map-get($container-max-widths, medium));
+//     }
+
+//     @media (max-width: 992px) {
+//         @include container(map-get($container-max-widths, small));
+//     }
+
+//     @media (max-width: 768px) {
+//         @include container(map-get($container-max-widths, extra-small));
+//     }
+
+//     @media (max-width: 576px) {
+//         width: 100%;
+//         padding-right: $container-padding-small;
+//         padding-left: $container-padding-small;
+//     }
+// }

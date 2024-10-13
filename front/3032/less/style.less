@@ -1,0 +1,118 @@
+@import url('./_variables.less');
+
+.left ul li {
+    list-style: none;
+    font-weight: 650;
+    margin-right: 10px;
+}
+
+.breadcrumb-area h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.left {
+    font-size: 14px;
+}
+
+.breadcrumb-area {
+    background: @background-content;
+    padding: 30px;
+
+}
+
+.breadcrumb-botton-area {
+    border-bottom: 1px solid #F0F0F0;
+    padding: 20px 0 0;
+    margin-left: -80px;
+}
+
+.left ul li:last-child {
+    color: @color-link;
+}
+
+.left ul li a:first-child {
+    color: black;
+    text-decoration: none;
+}
+
+// Hàm để tạo container
+.container-mixin(@max-width) {
+    width: 100%;
+    max-width: @max-width;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: @container-padding;
+    padding-left: @container-padding;
+    box-sizing: border-box;
+}
+
+.container-1 {
+    // Áp dụng mixin cho màn hình lớn
+    .container-mixin(@container-max-large);
+
+    // Media queries cho các kích thước màn hình khác
+    @media (max-width: 1200px) {
+        .container-mixin(@container-max-medium);
+    }
+
+    @media (max-width: 992px) {
+        .container-mixin(@container-max-small);
+    }
+
+    @media (max-width: 768px) {
+        .container-mixin(@container-max-extra-small);
+    }
+
+    @media (max-width: 576px) {
+        width: 100%;
+        padding-right: @container-padding-small;
+        padding-left: @container-padding-small;
+    }
+}
+
+.group-questions {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 50px 25px 25px 25px;
+    background: @background-content ;
+}
+
+.single-item:hover {
+    box-shadow: @box-shadow-faq-content;
+}
+
+.single-item {
+    display: block;
+    background: #fff;
+    color: @color-single-item-title;
+    padding: 55px 30px 35px;
+    transition: all 500ms ease;
+    box-shadow: @box-shadow-content-default;
+}
+
+.content-item {
+    margin-bottom: 30px;
+}
+
+.single-item .text a i {
+    margin-left: 5px;
+}
+
+.single-item .text a {
+    text-decoration: none;
+    color: #3d3d3d;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.single-item .text {
+    font-size: 14px;
+    color: #919191;
+}
+
+.single-item .title h3 {
+    font-weight: 700;
+    font-size: 20px;
+}
