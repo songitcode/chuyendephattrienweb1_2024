@@ -12,6 +12,11 @@
             a:hover {
                 color: @color-hover-link;
             }
+
+            a:first-child {
+                color: @black;
+                text-decoration: none;
+            }
         }
 
         li:last-child {
@@ -37,10 +42,6 @@
     margin-left: -80px;
 }
 
-.left ul li a:first-child {
-    color: @black;
-    text-decoration: none;
-}
 
 // Hàm để tạo container
 .container-mixin(@max-width) {
