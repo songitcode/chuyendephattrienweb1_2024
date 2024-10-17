@@ -1,0 +1,225 @@
+@import url('./_variables.less');
+
+.left ul li {
+    list-style: none;
+    font-weight: 650;
+    margin-right: 10px;
+}
+
+.breadcrumb-area h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.left {
+    font-size: 14px;
+}
+
+.left ul li a:hover {
+    color: @color-hover-link;
+}
+
+.breadcrumb-area {
+    background: @color-background-content;
+    padding: 30px;
+
+}
+
+.breadcrumb-botton-area {
+    border-bottom: 1px solid #F0F0F0;
+    padding: 20px 0 0;
+    margin-left: -80px;
+}
+
+.left ul li:last-child {
+    color: @color-link;
+}
+
+.left ul li a:first-child {
+    color: @black;
+    text-decoration: none;
+}
+
+.container-1 {
+    .container-mixin(@container-max-large);
+
+    @media (max-width: 1200px) {
+        .container-mixin(@container-max-medium);
+    }
+
+    @media (max-width: 992px) {
+        .container-mixin(@container-max-small);
+    }
+
+    @media (max-width: 768px) {
+        .container-mixin(@container-max-extra-small);
+    }
+
+    @media (max-width: 576px) {
+        width: 100%;
+        padding-right: @container-padding-small;
+        padding-left: @container-padding-small;
+    }
+}
+
+.product {
+    position: relative;
+    overflow: hidden;
+
+    .add-to-cart {
+        position: absolute;
+        top: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        background: @color-add-cart;
+        color: @white;
+        font-weight: 700;
+        .text-decor(@none);
+        visibility: hidden;
+        transition: all 300ms ease;
+    }
+
+    .image-product {
+        transition: all 300ms ease;
+    }
+
+    &:hover {
+
+        // Sử dụng lồng hover bên trong selector cha
+        .image-product {
+            .phong-to(1.1);
+        }
+
+        .add-to-cart {
+            visibility: visible;
+            top: 85%;
+        }
+    }
+
+    .onsale {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        top: 4%;
+        right: 5%;
+        background: @color-sale;
+        color: @white;
+        .font-size(13px);
+        .border-radius(50%);
+    }
+
+}
+
+.orderby {
+    padding: 5px;
+}
+
+.price-name {
+    text-align: center;
+    .m-top(15px);
+
+    .name-product {
+        .font-size(18px);
+        .chu-in-dam(500);
+        .text-decor(@none);
+        color: @black;
+    }
+
+    .price-old {
+        .do_mo(.5);
+        .text-decor(@gach-ngang-text);
+    }
+
+    p {
+        .font-size(16px);
+        color: @color-sale;
+    }
+
+    .name-product:hover {
+        color: @color-add-cart;
+    }
+}
+
+.search-product {
+    width: 100%;
+    float: left;
+    margin-right: 0;
+    background: #f6f6f6;
+    border: 0;
+    padding: 7px 20px !important;
+    height: 40px !important;
+    border-radius: 0 !important;
+    outline: @none;
+    transition: all 0.3s ease-out;
+
+    &:focus {
+        box-shadow: @box-shadow-search;
+    }
+}
+
+.woocommerce-ordering {
+    select {
+        vertical-align: top;
+        border: 1px solid #ddd;
+        padding: 5px 10px;
+        height: 31px;
+        margin-top: 0;
+        outline: none;
+        .font-size(13px);
+    }
+
+}
+
+.woocommerce-pagination {
+    display: flex;
+    justify-content: center;
+
+    .page-numbers {
+        display: flex;
+
+        li {
+            transition: all 0.3s ease-out;
+            list-style: @none;
+            border: 5px solid @color-boder-pagination;
+            .m-left(5px);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a,
+            span {
+                text-decoration: @none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                color: @black;
+            }
+
+            .current {
+                background: @color-add-cart;
+                color: @white;
+            }
+
+            &:hover {
+                background: @color-add-cart;
+
+                a,
+                span {
+                    color: @white;
+                }
+            }
+        }
+    }
+}

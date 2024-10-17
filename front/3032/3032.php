@@ -6,14 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
-        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./fonts/Font-Awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet/less" type="text/css" href="less/style.less">
-    <link rel="stylesheet/scss" type="text/css" href="scss/style.scss">
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1/dist/less.min.js"></script>
+    <script src="./libs/less/less.min.js"></script>
 </head>
 
 <body>

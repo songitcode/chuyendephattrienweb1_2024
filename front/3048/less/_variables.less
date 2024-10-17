@@ -1,0 +1,88 @@
+// File biến các Less Css
+@color-link: #43C8EF;
+@color-hover-link: #43C8EF;
+@color-single-item-title: #272727;
+@color-background-content: #F7F7F7;
+@color-boder-hover: #43C3EA;
+@box-shadow-content-default: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+@box-shadow-search: rgba(115, 145, 171, 0.943) 0px 5px 15px;
+@box-shadow-faq-content: 0 3px 8px -1px rgba(67, 195, 234, 1);
+@black: #000;
+@white: #fff;
+@color-boder-pagination: #E0E0E0;
+@color-add-cart: #f2480c;
+@color-sale: #CB4444;
+@gach-ngang-text: line-through;
+@none: none;
+@gach-chan-text: underline;
+
+// Mixin
+.container-mixin(@max-width) {
+    width: 100%;
+    max-width: @max-width;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: @container-padding;
+    padding-left: @container-padding;
+    box-sizing: border-box;
+}
+
+.font-size(@font-size) {
+    font-size: @font-size;
+}
+
+.phong-to(@size) {
+    scale: @size;
+}
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.chu-in-dam(@size) {
+    font-weight: @size;
+}
+
+.m-top(@margin-top) {
+    margin-top: @margin-top;
+}
+
+.m-left(@margin-left) {
+    margin-left: @margin-left;
+}
+
+.m-t-r-b-l(@tren, @phai, @duoi, @trai) {
+    margin: @tren @phai @duoi @trai;
+}
+
+.m-t-lr-b(@tren, @trai_phai, @duoi) {
+    margin: @tren @trai_phai @duoi;
+}
+
+.p-t-r-b-l(@tren, @phai, @duoi, @trai) {
+    padding: @tren @phai @duoi @trai;
+}
+
+
+.do_mo(@opacity) {
+    opacity: @opacity;
+}
+
+.text-decor(@text_decoration) {
+    text-decoration: @text_decoration;
+}
+
+.transition(@property, @duration, @timing_funtion, @delay) {
+    transition: @property @duration @timing_funtion @delay;
+}
+
+// Định nghĩa các biến cho chiều rộng tối đa và padding
+@container-max-large: 1140px;
+@container-max-medium: 960px;
+@container-max-small: 720px;
+@container-max-extra-small: 540px;
+
+@container-padding: 15px;
+@container-padding-small: 10px;
